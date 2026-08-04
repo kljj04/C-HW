@@ -1,0 +1,9 @@
+BasedOnStyle: LLVM
+AllowShortLoopsOnASingleLine: true
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+BinPackArguments: true
+ColumnLimit: 1200
+AllowShortFunctionsOnASingleLine: Inline
+BreakBeforeBraces: Allman
