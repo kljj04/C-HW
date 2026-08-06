@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <time.h>
 // int main() {
 //	int multi = 1;
 //	int number = 1;
@@ -170,33 +170,77 @@
 //     }
 // }
 
+// int main()
+//{
+//     int input;
+//     enum
+//     {
+//         GAMEOVER,
+//         NEWGAME,
+//         LOADGAME,
+//         OPTION
+//     };
+//
+//     do
+//     {
+//         printf("\n메뉴 선택: %");
+//         printf("1:새 게임 2:이어하기 3:옵션 (0:종료)");
+//         scanf("%d", &input);
+//
+//         switch (input)
+//         {
+//         case NEWGAME:
+//             printf("새 게임\n");
+//         case LOADGAME:
+//             printf("세이브 데이터 로드\n");
+//         case OPTION:
+//             printf("옵션 세팅\n");
+//         }
+//     } while (input != 0);
+//     printf("게임 종료");
+//     return 0;
+// }
+//
+// int main()
+//{
+//     int sheep;
+//     for (sheep = 1; sheep <= 50; sheep++)
+//     {
+//         if (sheep % 10 == 0)
+//         {
+//             printf("깜빡 졸았다!\n");
+//             continue;
+//         }
+//         printf("양 %d마리\n", sheep);
+//         if (sheep == 44)
+//         {
+//             break;
+//         }
+//     }
+//     printf("잠들었다");
+// }
+
 int main()
 {
-    int input;
-    enum
+    int ten = 0;
+    for (int i = 1; i <= 5000; i++)
     {
-        GAMEOVER,
-        NEWGAME,
-        LOADGAME,
-        OPTION
-    };
 
-    do
-    {
-        printf("\n메뉴 선택: %");
-        printf("1:새 게임 2:이어하기 3:옵션 (0:종료)");
-        scanf("%d", &input);
-
-        switch (input)
+        if (i % 10 % 3  == 0 )
         {
-        case NEWGAME:
-            printf("새 게임\n");
-        case LOADGAME:
-            printf("세이브 데이터 로드\n");
-        case OPTION:
-            printf("옵션 세팅\n");
+            printf("%d\n", i);
         }
-    } while (input != 0);
-    printf("게임 종료");
-    return 0;
+        else if ((i / 10) % 10 % 3 == 0)
+        {
+            printf("%d\n", i);
+        }
+        else if ((i / 100) % 10 % 3 == 0)
+        {
+            printf("%d\n", i);
+        }
+        else if ((i / 1000) % 10 % 3 == 0)
+        {
+            printf("%d\n", i);
+        }
+    }
 }
