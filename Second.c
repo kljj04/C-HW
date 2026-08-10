@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+
 // int main() {
 //	int multi = 1;
 //	int number = 1;
@@ -16,7 +17,7 @@
 //	}
 //	return 0;
 // }
-
+//
 // int main() {
 //	int i = 65;
 //	while (i < 91) {
@@ -29,7 +30,7 @@
 //	}
 //	return 0;
 // }
-
+//
 // int main() {
 //	int num = 0;
 //	int a, b;
@@ -53,7 +54,7 @@
 //	}
 //	return 0;
 // }
-
+//
 // int main() {
 //	int sum = 0;
 //	int input;
@@ -76,7 +77,7 @@
 //
 //	}
 // }
-
+//
 // int main() {
 //	int sum = 0;
 //	int input = 0;
@@ -98,7 +99,7 @@
 //		}
 //	}
 // }
-
+//
 // int main()
 //{
 //     char PlayerInput[30] = "";
@@ -169,7 +170,7 @@
 //         }
 //     }
 // }
-
+//
 // int main()
 //{
 //     int input;
@@ -219,28 +220,151 @@
 //     }
 //     printf("잠들었다");
 // }
+//
+//int main()
+//{
+//    int ten = 0;
+//    for (int i = 1; i <= 5000; i++)
+//    {
+//
+//        if (i % 10 % 3  == 0 )
+//        {
+//            printf("%d\n", i);
+//        }
+//        else if ((i / 10) % 10 % 3 == 0)
+//        {
+//            printf("%d\n", i);
+//        }
+//        else if ((i / 100) % 10 % 3 == 0)
+//        {
+//            printf("%d\n", i);
+//        }
+//        else if ((i / 1000) % 10 % 3 == 0)
+//        {
+//            printf("%d\n", i);
+//        }
+//    }
+//}
+//
+//int main()
+//{
+//    for (int i = 1; i <= 9; i++)
+//    {
+//        for (int j = 0; j <= 9; j++)
+//        {
+//            printf("%d x %d = %d\n", i, j, i * j);
+//        }
+//        printf("\n");
+//    }
+//}
+//
+//int main()
+//{
+//    for (int i = 1; i <= 6; i++)
+//    {
+//        for (int j = 1; j <= 4; j++)
+//        {
+//            printf("(%d,%d)\n", i, j);
+//        }
+//    }
+//}
+//
+//int main() {
+//    int inter, outer;
+//    for (outer = 5; outer > 0; outer--)
+//    {
+//        for (inter = 0; inter < outer -1; inter++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//}
+
+//int main()
+//{
+//    int a, b;
+//    for (a = 1; a <= 4; a++)
+//    {
+//        for (b = 1; b <= 7; b++)
+//        {
+//        }
+//        printf("\n");
+//    }
+//}
+
+/*
+int main()
+{
+    int out, in;
+    for (out = 0; out < 4; out++)
+    {
+        for (in = 0; in < out + 1; in++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+*/
+
 
 int main()
 {
-    int ten = 0;
-    for (int i = 1; i <= 5000; i++)
+    int out, in;
+    for (out = 0; out < 5; out++)
     {
+        for (in = 0; in < out + 1; in++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for (out = 5; out > 0; out--)
+    {
+        for (in = 0; in < out; in++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for (out = 0; out < 5; out++)
+    {
+        for (in = 4; in > out; in--)
+        {
+            printf(" ");
+        }
 
-        if (i % 10 % 3  == 0 )
+        for (in = 0; in < out + 1; in++)
         {
-            printf("%d\n", i);
+            printf("*");
         }
-        else if ((i / 10) % 10 % 3 == 0)
+        
+        printf("\n");
+    }
+    printf("\n");
+    for (out = 5; out > 0; out--)
+    {
+        for (in = 4; in > out + 3; in--)
         {
-            printf("%d\n", i);
+            printf(" ");
         }
-        else if ((i / 100) % 10 % 3 == 0)
+        for (in = 0; in < out; in++)
         {
-            printf("%d\n", i);
+            printf("*");
         }
-        else if ((i / 1000) % 10 % 3 == 0)
+        printf("\n");
+    }
+    printf("\n"); 
+    for (out = 0; out < 4; out++)
+    {
+        for (in = 0; in < out; in++)
         {
-            printf("%d\n", i);
+            printf("*");
+            
         }
+        printf("\n");
     }
 }
