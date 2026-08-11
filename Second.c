@@ -426,9 +426,6 @@ int main()
         printf("\n");
     }
     printf("\n");
-
-
-
 }
 
 #pragma endregion
