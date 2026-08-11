@@ -4,6 +4,9 @@
 #include <string.h>
 #include <time.h>
 
+#pragma once
+
+#pragma region 하던거
 // int main() {
 //	int multi = 1;
 //	int number = 1;
@@ -280,7 +283,7 @@
 //        printf("\n");
 //    }
 //}
-
+//
 //int main()
 //{
 //    int a, b;
@@ -292,26 +295,28 @@
 //        printf("\n");
 //    }
 //}
+//
+//int main()
+//{
+//    int out, in;
+//    for (out = 0; out < 4; out++)
+//    {
+//        for (in = 0; in < out + 1; in++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//}
 
-/*
+#pragma endregion
+
+#pragma region 별찍기
+
 int main()
 {
     int out, in;
-    for (out = 0; out < 4; out++)
-    {
-        for (in = 0; in < out + 1; in++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-}
-*/
 
-
-int main()
-{
-    int out, in;
     for (out = 0; out < 5; out++)
     {
         for (in = 0; in < out + 1; in++)
@@ -320,7 +325,9 @@ int main()
         }
         printf("\n");
     }
+
     printf("\n");
+
     for (out = 5; out > 0; out--)
     {
         for (in = 0; in < out; in++)
@@ -329,7 +336,9 @@ int main()
         }
         printf("\n");
     }
+
     printf("\n");
+
     for (out = 0; out < 5; out++)
     {
         for (in = 4; in > out; in--)
@@ -344,10 +353,12 @@ int main()
 
         printf("\n");
     }
+
     printf("\n");
+
     for (out = 5; out > 0; out--)
     {
-        for (in = 4; in > out + 3; in--)
+        for (in = 4; in > out - 1; in--)
         {
             printf(" ");
         }
@@ -357,7 +368,9 @@ int main()
         }
         printf("\n");
     }
+
     printf("\n");
+
     for (out = 0; out < 5; out++)
     {
         for (in = 4; in > out; in--)
@@ -370,7 +383,9 @@ int main()
         }
         printf("\n");
     }
+
     printf("\n");
+
     for (out = 5; out > 0; out--)
     {
         for (in = 4; in > out - 1; in--)
@@ -383,4 +398,37 @@ int main()
         }
         printf("\n");
     }
+
+    printf("\n");
+
+    for (out = 0; out < 5; out++)
+    {
+        for (in = 4; in > out; in--)
+        {
+            printf(" ");
+        }
+        for (in = 0; in < (out * 2) + 1; in++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (out = 4; out > 0; out--)
+    {
+        for (in = 4; in > out - 1; in--)
+        {
+            printf(" ");
+        }
+        for (in = 0; in < (out * 2) - 1; in++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+
+
 }
+
+#pragma endregion
