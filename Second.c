@@ -341,7 +341,7 @@ int main()
         {
             printf("*");
         }
-        
+
         printf("\n");
     }
     printf("\n");
@@ -357,13 +357,29 @@ int main()
         }
         printf("\n");
     }
-    printf("\n"); 
-    for (out = 0; out < 4; out++)
+    printf("\n");
+    for (out = 0; out < 5; out++)
     {
-        for (in = 0; in < out; in++)
+        for (in = 4; in > out; in--)
+        {
+            printf(" ");
+        }
+        for (in = 0; in < (out * 2) + 1; in++)
         {
             printf("*");
-            
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for (out = 5; out > 0; out--)
+    {
+        for (in = 4; in > out - 1; in--)
+        {
+            printf(" ");
+        }
+        for (in = 0; in < (out * 2) - 1; in++)
+        {
+            printf("*");
         }
         printf("\n");
     }
