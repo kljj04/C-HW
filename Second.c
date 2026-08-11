@@ -4,6 +4,8 @@
 #include <string.h>
 #include <time.h>
 
+void swap(int *a, int *b);
+
 #pragma once
 
 #pragma region 하던거
@@ -313,119 +315,142 @@
 
 #pragma region 별찍기
 
+//int main()
+//{
+//    int out, in;
+//
+//    for (out = 0; out < 5; out++)
+//    {
+//        for (in = 0; in < out + 1; in++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//
+//    printf("\n");
+//
+//    for (out = 5; out > 0; out--)
+//    {
+//        for (in = 0; in < out; in++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//
+//    printf("\n");
+//
+//    for (out = 0; out < 5; out++)
+//    {
+//        for (in = 4; in > out; in--)
+//        {
+//            printf(" ");
+//        }
+//
+//        for (in = 0; in < out + 1; in++)
+//        {
+//            printf("*");
+//        }
+//
+//        printf("\n");
+//    }
+//
+//    printf("\n");
+//
+//    for (out = 5; out > 0; out--)
+//    {
+//        for (in = 4; in > out - 1; in--)
+//        {
+//            printf(" ");
+//        }
+//        for (in = 0; in < out; in++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//
+//    printf("\n");
+//
+//    for (out = 0; out < 5; out++)
+//    {
+//        for (in = 4; in > out; in--)
+//        {
+//            printf(" ");
+//        }
+//        for (in = 0; in < (out * 2) + 1; in++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//
+//    printf("\n");
+//
+//    for (out = 5; out > 0; out--)
+//    {
+//        for (in = 4; in > out - 1; in--)
+//        {
+//            printf(" ");
+//        }
+//        for (in = 0; in < (out * 2) - 1; in++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//
+//    printf("\n");
+//
+//    for (out = 0; out < 5; out++)
+//    {
+//        for (in = 4; in > out; in--)
+//        {
+//            printf(" ");
+//        }
+//        for (in = 0; in < (out * 2) + 1; in++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//    for (out = 4; out > 0; out--)
+//    {
+//        for (in = 4; in > out - 1; in--)
+//        {
+//            printf(" ");
+//        }
+//        for (in = 0; in < (out * 2) - 1; in++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//    printf("\n");
+//}
+#pragma endregion
+
+#pragma region 버블소트
+
 int main()
 {
-    int out, in;
+    int arr[100] = {103, 40, 106, 173, 124, 118, 179, 207, 107, 222, 215, 43, 7, 144, 171, 188, 9, 90, 202, 111, 53, 229, 12, 237, 207, 183, 44, 69, 22, 118, 116, 250, 123, 48, 151, 113, 119, 149, 138, 199, 97, 98, 200, 42, 51, 92, 26, 102, 12, 237, 88, 183, 98, 224, 81, 62, 145, 112, 157, 183, 24, 237, 15, 227, 114, 204, 213, 205, 146, 131, 168, 96, 148, 9, 74, 92, 186, 93, 35, 215, 18, 125, 248, 20, 100, 185, 92, 175, 191, 152, 85, 44, 162, 63, 247, 240, 187, 116, 192, 70};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
-    for (out = 0; out < 5; out++)
+    for (int i = 0; i < n; i++)
     {
-        for (in = 0; in < out + 1; in++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            printf("*");
+            if (arr[j] > arr[j + 1])
+            {
+            int temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+            }
         }
-        printf("\n");
     }
-
-    printf("\n");
-
-    for (out = 5; out > 0; out--)
-    {
-        for (in = 0; in < out; in++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-
-    printf("\n");
-
-    for (out = 0; out < 5; out++)
-    {
-        for (in = 4; in > out; in--)
-        {
-            printf(" ");
-        }
-
-        for (in = 0; in < out + 1; in++)
-        {
-            printf("*");
-        }
-
-        printf("\n");
-    }
-
-    printf("\n");
-
-    for (out = 5; out > 0; out--)
-    {
-        for (in = 4; in > out - 1; in--)
-        {
-            printf(" ");
-        }
-        for (in = 0; in < out; in++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-
-    printf("\n");
-
-    for (out = 0; out < 5; out++)
-    {
-        for (in = 4; in > out; in--)
-        {
-            printf(" ");
-        }
-        for (in = 0; in < (out * 2) + 1; in++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-
-    printf("\n");
-
-    for (out = 5; out > 0; out--)
-    {
-        for (in = 4; in > out - 1; in--)
-        {
-            printf(" ");
-        }
-        for (in = 0; in < (out * 2) - 1; in++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-
-    printf("\n");
-
-    for (out = 0; out < 5; out++)
-    {
-        for (in = 4; in > out; in--)
-        {
-            printf(" ");
-        }
-        for (in = 0; in < (out * 2) + 1; in++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-    for (out = 4; out > 0; out--)
-    {
-        for (in = 4; in > out - 1; in--)
-        {
-            printf(" ");
-        }
-        for (in = 0; in < (out * 2) - 1; in++)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-    printf("\n");
+    for (int k = 0; k < n; k++) printf("%d ", arr[k]);
 }
 
 #pragma endregion
